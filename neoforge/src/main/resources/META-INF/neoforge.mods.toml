@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "${fml_dependency}"
+loaderVersion = "[0,)"
 issueTrackerURL = "${issues_page}"
 license = "${license}"
 
@@ -19,22 +19,22 @@ ${description}
 logoFile = "icon.png"
 
 [[dependencies."${id}"]]
-modId = "forge"
-mandatory = true
-versionRange = "${fml_dependency}"
+modId = "neoforge"
+versionRange = "${neoforge_dependency}"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${id}"]]
 modId = "minecraft"
-mandatory = true
 versionRange = "${minecraft_dependency}"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies."${id}"]]
 modId = "architectury"
-mandatory = true
 versionRange = "[0,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[mixins]]
+config="${id}.mixins.json"
